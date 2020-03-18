@@ -1,0 +1,21 @@
+package aula1;
+public class Retangulo extends Poligono implements Diagonal{
+
+	public Retangulo(double base, double altura) {
+		super(base, altura);
+	}
+	@Override
+	public double area() {
+		return(getBase()*getAltura());
+	}
+	
+	@Override
+	public double calculaDiagonal() {
+		return Math.sqrt(Math.pow(getAltura(), 2) + Math.pow(getBase(), 2));
+	}
+	
+	@Override
+	public double perimetro() {
+		return (getBase() * 2 + getAltura() * 2);
+	}
+}
