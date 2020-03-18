@@ -1,0 +1,13 @@
+package aula1;
+
+public class Piramide extends Quadrado implements Volume{
+
+	public Piramide(double base, double altura) {
+		super(base, altura);
+	}
+	
+	@Override
+	public double calculaVolume() {
+		return ((getBase() * getBase() * getAltura())/3);
+	}
+}
