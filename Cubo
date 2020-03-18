@@ -1,0 +1,34 @@
+package aula1;
+public class Cubo extends Quadrado implements Volume, Diagonal{
+
+	private double comprimento;
+	
+	public void setComprimento(double comprimento) {
+		this.comprimento = comprimento;
+	}
+	public double getComprimento() {
+		return comprimento;
+	}
+	
+	public Cubo(double base, double altura, double comprimento) {
+		super(base, altura);
+		this.comprimento = comprimento;
+	}
+	
+	@Override
+	public double calculaVolume() {
+		return getComprimento() * getBase() * getAltura();
+	}
+	@Override
+	public double area() {
+		return (getBase()*getAltura()) * 6;
+	}
+	@Override
+	public double calculaDiagonal() {
+		return (getBase()*Math.sqrt(3));
+	}
+	@Override
+	public double perimetro() {
+		return getBase() * 12;
+	}
+}
